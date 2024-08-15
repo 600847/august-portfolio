@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 
 //components
 import Nav from "./Nav";
+import MobileNav from "./MobileNav";
 
 const Header = () => {
   return (
@@ -18,15 +19,14 @@ const Header = () => {
         <div className="hidden xl:flex items-center gap-8">
           <Nav />
           <Link href="/contact">
-            <Button className="bg-accent hover:bg-accent-hover">
-              {" "}
-              Ansatt meg
-            </Button>
+            <Button className="bg-accent hover:bg-accent-hover">Hire me</Button>
           </Link>
         </div>
 
         {/* mobile nav */}
-        <div className="xl:hidden"> mobile nav </div>
+        <div className="xl:hidden">
+          <MobileNav />
+        </div>
       </div>
     </header>
   );
