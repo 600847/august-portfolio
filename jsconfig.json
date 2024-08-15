@@ -2,6 +2,10 @@
   "compilerOptions": {
     "paths": {
       "@/*": ["./*"]
-    }
-  }
+    },
+    "allowJs": true, // Tillater .js filer i prosjektet
+    "checkJs": false // Deaktiverer TS-sjekk på .js filer
+  },
+  "include": ["**/*.jsx", "**/*.js"], // Inkluderer både .jsx og .js filer
+  "exclude": ["node_modules"]
 }
