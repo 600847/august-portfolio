@@ -280,8 +280,8 @@ const Resume = () => {
                             <li key={j}>
                               <TooltipProvider delayDuration={100}>
                                 <Tooltip>
-                                  <TooltipTrigger className=" w-full h-[120px] bg-[#232329] rounded-xl flex justify-center items-center">
-                                    <div className="text-6xl hover:text-accent transition-all duration-300">
+                                  <TooltipTrigger className=" w-full h-[120px] bg-[#232329] rounded-xl flex justify-center items-center group">
+                                    <div className="text-6xl group-hover:text-accent transition-all duration-300">
                                       {skill.icon}
                                     </div>
                                   </TooltipTrigger>
