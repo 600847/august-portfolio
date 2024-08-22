@@ -22,33 +22,36 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
   {
     number: "01",
-    category: "fullstack",
+    category: "Fullstack",
     title: "Power BI Distribution",
-    desciption: "Bachelors project",
+    desciption:
+      "A bachelor’s project where I developed a distribution system for Stacc Escali. The system automates and optimizes the distribution of Power BI reports, streamlining a previously manual and time-consuming process.",
     stack: [{ name: "Next.js" }, { name: ".NET" }, { name: "Azure Database" }],
-    image: "/assets/work/bachelor-project/dashboard-page.png",
+    image: "/assets/work/bachelor-project/reports-page.png",
     live: "",
-    github: "none",
+    github: "",
   },
   {
     number: "02",
     category: "frontend",
     title: "Escali Order System",
-    desciption: "Intern project",
+    desciption:
+      "An intern project where I built an order management system for Stacc Escali. The system enhances the user experience by providing a seamless interface for order processing and management.",
     stack: [{ name: "Next.js" }, { name: ".NET" }, { name: "Azure Database" }],
-    image: "/assets/work/bachelor-project/login-page.png",
+    image: "/assets/work/intern-project/dashboard-page.png",
     live: "",
     github: "",
   },
   {
     number: "03",
-    category: "fullstack",
+    category: "Software Development",
     title: "Sunsystem",
-    desciption: "Software Architecture",
-    stack: [{ name: "Next.js" }, { name: ".NET" }, { name: "Azure Database" }],
-    image: "/assets/work/bachelor-project/login-page.png",
+    desciption:
+      "A project for the DAT 154 course in Software Architecture and Development. I created a simulation of our solar system, showcasing the application of software architecture principles to model complex systems.",
+    stack: [{ name: ".NET Desktop" }],
+    image: "/assets/work/software-project/sunsystem.png",
     live: "",
-    github: "",
+    github: "https://github.com/600847/Solsystemet",
   },
 ];
 
@@ -124,7 +127,7 @@ const Work = () => {
               </div>
             </div>
           </div>
-          <div className="w-full xl:w-[50%]">
+          <div className="w-full xl:w-[60%]">
             <Swiper
               spaceBetween={30}
               slidesPerView={1}
@@ -134,16 +137,13 @@ const Work = () => {
               {projects.map((project, i) => {
                 return (
                   <SwiperSlide key={i} className="w-full">
-                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
-                      {/* overlay */}
-                      <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
-
+                    <div className="h-[460px] relative group flex justify-center items-center ">
                       {/* image */}
                       <div className="relative w-full h-full">
                         <Image
                           src={project.image}
-                          fill
-                          className="object-cover"
+                          layout="fill"
+                          className="object-contain"
                           alt=""
                         />
                       </div>

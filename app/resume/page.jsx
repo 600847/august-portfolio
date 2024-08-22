@@ -15,6 +15,7 @@ import {
   SiPowerbi,
 } from "react-icons/si";
 import { IoSchool } from "react-icons/io5";
+import { TbSql } from "react-icons/tb";
 import { MdBusinessCenter } from "react-icons/md";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
@@ -32,7 +33,7 @@ import ExperienceCards from "@/components/ExperienceCards";
 const about = {
   title: "About me",
   description:
-    " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo ex hic vel asperiores, iure libero voluptatem porro minima. Obcaecati maxime facilis quod id omnis nihil sint quos recusandae cum animi?",
+    "I'm a passionate software developer with a focus on web and mobile technologies. With over a year of hands-on experience, I enjoy tackling complex problems and creating efficient, user-friendly solutions. My background in Information Technology has equipped me with the skills to work across the full stack, from frontend design to backend architecture. I'm always eager to learn new technologies and improve my skills.",
   info: [
     {
       filedName: "Name",
@@ -65,7 +66,8 @@ const about = {
 const experience = {
   icon: <MdBusinessCenter />,
   title: "My experience",
-  description: "Lorem ipsum",
+  description:
+    "A collection of hands-on experiences working with cutting-edge technologies and contributing to real-world projects in software development.",
   items: [
     {
       company: "Stacc Escali",
@@ -82,24 +84,16 @@ const experience = {
     },
     {
       company: "Stacc Escali",
-      position: "Softeware Developer Intern",
+      position: "Software Developer Intern",
       duration: "August 2023 - December 2023",
-      projectDescription: "#",
-      skills: [{ name: "Next.js", icon: <SiNextdotjs /> }],
-    },
-    {
-      company: "Oslo Kommune, Lambertseter skole",
-      position: "Teaching Assistent",
-      duration: "August 2020 - June 2021",
-      projectDescription: "",
-      skills: [{ name: "Next.js", icon: <SiNextdotjs /> }],
-    },
-    {
-      company: "Norwegian Armed Forces",
-      position: "Private",
-      duration: "August 2019 - July 2020",
-      projectDescription: "tews",
-      skills: [{ name: "Next.js", icon: <SiNextdotjs /> }],
+      projectDescription:
+        "Developed a fullstack solution to manage customer orders and project deadlines using NextJS and ASP.NET, with a primary focus on front-end development",
+      skills: [
+        { name: "Next.js", icon: <SiNextdotjs /> },
+        { name: ".NET", icon: <SiDotnet /> },
+        { name: "Microsoft SQL Server", icon: <SiMicrosoftsqlserver /> },
+        ,
+      ],
     },
   ],
 };
@@ -108,7 +102,8 @@ const experience = {
 const education = {
   icon: <IoSchool />,
   title: "My education",
-  description: "Lorem ipsum",
+  description:
+    "Pursuing a degree in Information Technology with a specialization in Web- and Mobile Technology, focusing on both practical and theoretical aspects of modern software development.",
   items: [
     {
       institution: "Western University of Applied Science - (HVL)",
@@ -123,7 +118,8 @@ const education = {
 // skills data
 const skills = {
   title: "My skills",
-  description: "Lorem ipsum",
+  description:
+    "A comprehensive set of skills acquired through academic projects, internships, and self-driven learning. These skills span programming languages, frameworks, and tools crucial for modern software development.",
   skillsType: [
     {
       title: "Programming Languages",
@@ -149,8 +145,8 @@ const skills = {
           name: "C#",
         },
         {
-          icon: <SiCplusplus />,
-          name: "C++",
+          icon: <TbSql />,
+          name: "SQL",
         },
       ],
     },
@@ -232,7 +228,7 @@ const Resume = () => {
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{education.title}</h3>
                 <p className="maw-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {experience.description}
+                  {education.description}
                 </p>
                 <ScrollArea className="h-[458px] ">
                   <ul className="grid grid-cols-1  gap-[30px] mx-[30px] my-[30px] ">
