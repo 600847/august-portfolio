@@ -11,6 +11,8 @@ import {
   SiCsharp,
   SiCplusplus,
   SiTailwindcss,
+  SiMicrosoftsqlserver,
+  SiPowerbi,
 } from "react-icons/si";
 import { IoSchool } from "react-icons/io5";
 import { MdBusinessCenter } from "react-icons/md";
@@ -22,7 +24,9 @@ import {
   TooltipContent,
 } from "@/components/ui/tooltip";
 import { ScrollArea } from "@/components/ui/scroll-area";
+
 import { motion } from "framer-motion";
+import ExperienceCards from "@/components/ExperienceCards";
 
 // about data
 const about = {
@@ -65,23 +69,37 @@ const experience = {
   items: [
     {
       company: "Stacc Escali",
-      position: "Bachelor Project Intern",
+      position: "Bachelor Thesis Project",
       duration: "January 2024 - May 2024",
+      projectDescription:
+        "Developed a fullstack solution using Next.js and ASP.NET to automate, optimize and organize the distribution of PowerBI reports, addressing the problem of a time-consuming manual process for Stacc Escali",
+      skills: [
+        { name: "Next.js", icon: <SiNextdotjs /> },
+        { name: ".NET", icon: <SiDotnet /> },
+        { name: "Microsoft SQL Server", icon: <SiMicrosoftsqlserver /> },
+        { name: "Power BI", icon: <SiPowerbi /> },
+      ],
     },
     {
       company: "Stacc Escali",
       position: "Softeware Developer Intern",
       duration: "August 2023 - December 2023",
+      projectDescription: "#",
+      skills: [{ name: "Next.js", icon: <SiNextdotjs /> }],
     },
     {
       company: "Oslo Kommune, Lambertseter skole",
       position: "Teaching Assistent",
       duration: "August 2020 - June 2021",
+      projectDescription: "",
+      skills: [{ name: "Next.js", icon: <SiNextdotjs /> }],
     },
     {
       company: "Norwegian Armed Forces",
       position: "Private",
       duration: "August 2019 - July 2020",
+      projectDescription: "tews",
+      skills: [{ name: "Next.js", icon: <SiNextdotjs /> }],
     },
   ],
 };
@@ -202,21 +220,7 @@ const Resume = () => {
                 <ScrollArea className="h-[458px] ">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px] mx-[30px] my-[30px] ">
                     {experience.items.map((item, i) => {
-                      return (
-                        <li
-                          key={i}
-                          className="bg-[#232329] h-[184px] px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-[0_0_12px_4px_rgba(255,26,26,1)]"
-                        >
-                          <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px]">
-                            {item.position}
-                          </h3>
-                          <div className="flex items-center gap-3">
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                            <p className="text-white/60">{item.company}</p>
-                          </div>
-                        </li>
-                      );
+                      return <ExperienceCards key={i} item={item} />;
                     })}
                   </ul>
                 </ScrollArea>
@@ -306,10 +310,12 @@ const Resume = () => {
               className="w-full text-center xl:text-left"
             >
               <div className="flex flex-col gap-[30px]">
-                <h3 className="text-4xl font-bold">{about.title} </h3>
-                <p className="text-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {about.description}
-                </p>
+                <div className=" flex flex-col gap-[30px] text-center xl:text-left">
+                  <h3 className="text-4xl font-bold">{about.title} </h3>
+                  <p className="text-w-[600px] text-white/60 mx-auto xl:mx-0">
+                    {about.description}
+                  </p>
+                </div>
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
                   {about.info.map((items, i) => {
                     return (
