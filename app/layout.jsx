@@ -1,5 +1,6 @@
 import { Roboto_Condensed } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 //components
 import Header from "@/components/Header";
@@ -20,7 +21,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={robotoCondensed.variable}>
         <Header />
-        <PageTransition> {children}</PageTransition>
+        <PageTransition>
+          {children} <Analytics />
+        </PageTransition>
       </body>
     </html>
   );
