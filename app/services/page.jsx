@@ -4,16 +4,29 @@ import { BsArrowDownRight } from "react-icons/bs";
 import { motion } from "framer-motion";
 
 const services = [
-  { num: "01", title: "fullstack-development", description: "coding" },
+  {
+    num: "01",
+    title: "Fullstack Development",
+    description:
+      "Expert in building scalable and efficient web applications from front-end to back-end.",
+  },
   {
     num: "02",
-    title: "database handling",
-    description: "constuction databases",
+    title: "Database Management",
+    description:
+      "Proficient in designing, constructing, and optimizing databases for various use cases.",
   },
   {
     num: "03",
-    title: "backend architecture",
-    description: "i know how to make clean architecture",
+    title: "Backend Architecture",
+    description:
+      "Specialized in creating clean, scalable, and maintainable backend architecture.",
+  },
+  {
+    num: "04",
+    title: "UI/UX Design with Figma",
+    description:
+      "Experienced in creating intuitive and user-friendly designs using Figma.",
   },
 ];
 
@@ -31,16 +44,19 @@ const Services = () => {
         >
           {services.map((service, i) => {
             return (
-              <div key={i} className="flex-1 flex flex-col  gap-6 ">
+              <div key={i} className="flex-1 flex flex-col  gap-6 group">
                 {/* top */}
-                <div className="w-full flex justify-between items-center">
-                  <div>{service.num}</div>
-                  <BsArrowDownRight />
+                <div className="w-full flex justify-between items-center ">
+                  <div className="text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500">
+                    {service.num}
+                  </div>
                 </div>
                 {/* title */}
-                <h2>{service.title}</h2>
+                <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500">
+                  {service.title}
+                </h2>
                 {/* description */}
-                <p>{service.description}</p>
+                <p className="text-white/60">{service.description}</p>
                 {/* border */}
                 <div className="border-b border-white/20 w-full"></div>
               </div>
