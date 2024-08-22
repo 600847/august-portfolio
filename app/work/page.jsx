@@ -26,7 +26,11 @@ const projects = [
     title: "Power BI Distribution",
     desciption:
       "A bachelor’s project where I developed a distribution system for Stacc Escali. The system automates and optimizes the distribution of Power BI reports, streamlining a previously manual and time-consuming process.",
-    stack: [{ name: "Next.js" }, { name: ".NET" }, { name: "Azure Database" }],
+    stack: [
+      { name: "Next.js" },
+      { name: ".NET" },
+      { name: "Microsoft SQL Server" },
+    ],
     image: "/assets/work/bachelor-project/reports-page.png",
     live: "",
     github: "",
@@ -37,7 +41,11 @@ const projects = [
     title: "Escali Order System",
     desciption:
       "An intern project where I built an order management system for Stacc Escali. The system enhances the user experience by providing a seamless interface for order processing and management.",
-    stack: [{ name: "Next.js" }, { name: ".NET" }, { name: "Azure Database" }],
+    stack: [
+      { name: "Next.js" },
+      { name: ".NET" },
+      { name: "Microsoft SQL Server" },
+    ],
     image: "/assets/work/intern-project/dashboard-page.png",
     live: "",
     github: "",
