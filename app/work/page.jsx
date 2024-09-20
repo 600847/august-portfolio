@@ -24,6 +24,16 @@ const projects = [
   {
     number: "01",
     category: "Fullstack",
+    title: "House Of Lords",
+    desciption: "A card game for the brave. Coming soon!",
+    stack: [{ name: "Next.js" }, { name: "Prisma" }, { name: "Auth.js" }],
+    image: "/assets/work/house-of-lords-project/house-of-lords.png",
+    live: "",
+    github: "https://github.com/600847/house-of-lords",
+  },
+  {
+    number: "02",
+    category: "Fullstack",
     title: "Power BI Distribution",
     desciption:
       "A bachelor’s project where I developed a distribution system for Stacc Escali. The system automates and optimizes the distribution of Power BI reports, streamlining a previously manual and time-consuming process.",
@@ -37,8 +47,8 @@ const projects = [
     github: "",
   },
   {
-    number: "02",
-    category: "frontend",
+    number: "03",
+    category: "Front-end",
     title: "Escali Order System",
     desciption:
       "An intern project where I built an order management system for Stacc Escali. The system enhances the user experience by providing a seamless interface for order processing and management.",
@@ -52,7 +62,7 @@ const projects = [
     github: "",
   },
   {
-    number: "03",
+    number: "04",
     category: "Software Development",
     title: "Sunsystem",
     desciption:
